@@ -25,5 +25,5 @@ jobs:
 
       - name: Build and push the Docker image
         run: |
-          docker build . --tag ghcr.io/djeebus/kasmweb-comictagger:${{ env.RELEASE_VERSION }}
+          docker build . --build-arg 'BASE_TAG=1.12.0' --tag ghcr.io/djeebus/kasmweb-comictagger:${{ env.RELEASE_VERSION }}
           docker push ghcr.io/djeebus/kasmweb-comictagger:${{ env.RELEASE_VERSION }}
