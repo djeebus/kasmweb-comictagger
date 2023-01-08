@@ -10,7 +10,7 @@ WORKDIR $HOME
 
 ######### Customize Container Here ###########
 
-RUN apt-get update && apt-get install -y python3-pip python3-pyqt5 rar
+RUN apt-get update && apt-get install -y python3-pip python3-pyqt5 rar python3-icu
 
 COPY ./install.sh $INST_SCRIPTS/comictagger/
 RUN bash $INST_SCRIPTS/comictagger/install.sh && rm -rf $INST_SCRIPTS/comictagger/
